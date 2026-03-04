@@ -448,8 +448,8 @@ const CustomReport = () => {
                                     <div className='max-w-200px mx-auto h-[122vh] border-2 rounded-lg my-2 p-2 overflow-x-hidden overflow-y-auto ease-in-out duration-300 border-blue-200'>
 
                                         <div>
-                                            <p className='text-center font-bold text-sm md:text-xl'>SWAMI RAMANAND TEERTH MARATHWADA UNIVERSITY </p>
-                                            <p className='text-center mb-2 text-xs md:text-base'>Vishnupuri, Nanded 431 606, Maharashtra State, India</p>
+                                            <p className='text-center font-bold text-sm md:text-xl'>OPERANT SCIENTIFIC PVT. LTD. </p>
+                                            <p className='text-center mb-2 text-xs md:text-base'>Pali-306 401, Rajasthan, India</p>
                                             <hr />
                                             <br />
                                         </div>
