@@ -1,0 +1,30 @@
+.pm-usha-actionButton{
+    width: 200px; 
+    border: solid 2px #324cc8; 
+    border-radius: 10px; 
+    color: #324cc8
+}
+
+.pm-usha-title{
+    width: 80%; 
+    border-radius: 8px 0 0 8px;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    border-right: solid 2px #324cc8;
+    font-size: 18px
+}
+
+.dropin-soft-equipment{
+    width: 20%;
+    border-radius: 0 8px 8px 0;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.dropin-soft-equipment:hover{
+    color: #fff;
+    background: #324cc8;
+}

@@ -1,0 +1,642 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+html,
+body {
+  min-height: 100%;
+  /* background: linear-gradient(125deg, #FFFFFF 0%, #000000 100%), linear-gradient(200deg, #FFD9E8 0%, #FFD9E8 50%, #DE95BA calc(50% + 1px), #DE95BA 60%, #7F4A88 calc(60% + 1px), #7F4A88 75%, #4A266A calc(75% + 1px), #4A266A 100%), linear-gradient(113deg, #FFD9E8 0%, #FFD9E8 40%, #DE95BA calc(40% + 1px), #DE95BA 50%, #7F4A88 calc(50% + 1px), #7F4A88 70%, #4A266A calc(70% + 1px), #4A266A 100%);
+  background-blend-mode: overlay, overlay, normal;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+}
+
+.index-skeleton .MuiLinearProgress-root {
+  background-color: #fff3af;
+}
+
+.index-skeleton .MuiLinearProgress-bar1Indeterminate,
+.index-skeleton .MuiLinearProgress-bar2Indeterminate {
+  background-color: #f56e0d;
+}
+
+
+
+.aaa-break {
+  break-inside: avoid;
+  page-break-after: always;
+  page-break-inside: avoid;
+  page-break-before: avoid;
+}
+
+.break {
+  break-inside: avoid;
+  page-break-after: always;
+  page-break-inside: avoid;
+  page-break-before: avoid;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* body::-webkit-scrollbar {
+  display: none;
+} */
+
+#g-1 {
+  background: rgb(0, 20, 36);
+  background: linear-gradient(90deg, rgba(0, 20, 36, 1) 0%, rgba(9, 34, 121, 0.9360878140318627) 46%, rgba(0, 142, 255, 1) 84%);
+}
+
+#g-2 {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 0%, rgba(252, 176, 69, 1) 100%);
+}
+
+#g-3 {
+  background: rgb(5, 54, 17);
+  background: linear-gradient(143deg, rgba(5, 54, 17, 1) 0%, rgba(67, 247, 54, 1) 100%);
+}
+
+#g-4 {
+  background: rgb(68, 0, 0);
+  background: linear-gradient(143deg, rgba(68, 0, 0, 1) 0%, rgba(252, 111, 213, 1) 100%);
+}
+
+#g-5 {
+  background: rgb(61, 53, 6);
+  background: linear-gradient(143deg, rgba(61, 53, 6, 1) 0%, rgba(247, 239, 54, 1) 100%);
+}
+
+.change__scrollbar::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+}
+
+
+.change__scrollbar::-webkit-scrollbar {
+  width: 9px;
+  background: transparent;
+}
+
+
+.change__scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #d2e6f9;
+}
+
+.hide__scrollbar::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background: transparent;
+  display: hidden;
+}
+
+
+.hide__scrollbar::-webkit-scrollbar {
+  width: 0px;
+  display: hidden;
+  padding: 0px;
+  margin: 0px;
+  background: transparent;
+}
+
+
+.hide__scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: #d2e6f9;
+  display: hidden;
+
+}
+
+
+.radius-10 {
+  border-radius: 10px !important;
+}
+
+.border-info {
+  border-left: 5px solid #0dcaf0 !important;
+}
+
+.border-danger {
+  border-left: 5px solid #fd3550 !important;
+}
+
+.border-success {
+  border-left: 5px solid #15ca20 !important;
+}
+
+.border-warning {
+  border-left: 5px solid #ffc107 !important;
+}
+
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: .25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+}
+
+.bg-gradient-scooter {
+  background: #17ead9;
+  background: -webkit-linear-gradient(45deg, #17ead9, #6078ea) !important;
+  background: linear-gradient(45deg, #17ead9, #6078ea) !important;
+}
+
+.widgets-icons-2 {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ededed;
+  font-size: 27px;
+  border-radius: 10px;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.ms-auto {
+  margin-left: auto !important;
+}
+
+.bg-gradient-bloody {
+  background: #f54ea2;
+  background: -webkit-linear-gradient(45deg, #f54ea2, #ff7676) !important;
+  background: linear-gradient(45deg, #f54ea2, #ff7676) !important;
+}
+
+.bg-gradient-ohhappiness {
+  background: #00b09b;
+  background: -webkit-linear-gradient(45deg, #00b09b, #96c93d) !important;
+  background: linear-gradient(45deg, #00b09b, #96c93d) !important;
+}
+
+.bg-gradient-blooker {
+  background: #ffdf40;
+  background: -webkit-linear-gradient(45deg, #ffdf40, #ff8359) !important;
+  background: linear-gradient(45deg, #ffdf40, #ff8359) !important;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: black;
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}
+
+
+.apply-bg-gradient {
+  /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
+  background-image: linear-gradient(to top, #9dcbff24 0%, #d4e6ff 100%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  border-radius: 20px;
+  height: 20vh;
+  /* box-shadow: inset 13px 0rem 8rem 8rem #ffffff */
+  box-shadow: inset 20px -37px 470px 170px #ffffff
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body {
+  margin-top: 20px;
+}
+
+.price-innerdetail h5 {
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+.price-innerdetail p {
+  font-size: 40px;
+}
+
+.detail-pricing {
+  border-bottom: 1px solid;
+  padding: 30px 0 30px 0;
+}
+
+.detail-pricing .float-left {
+  padding: 0 0 0 40px;
+}
+
+.detail-pricing .float-left i {
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+}
+
+.detail-pricing span {
+  display: inline-block;
+  position: relative;
+  font-weight: 400;
+}
+
+.wrap-price {
+  /* background: rgb(0 64 255 / 10%); */
+  /* background-color: white; */
+  /* background-color: rgb(255 255 255 / 9%); */
+  background-color: rgb(255 255 255 / 55%);
+
+  padding: 50px 20px 50px;
+  border-radius: 10px;
+}
+
+.center-wrap {
+  background: #070707;
+  color: #fff;
+}
+
+
+.gray {
+  border: 2px solid #8c8cd9;
+  background-color: rgba(140, 140, 217, 0.14);
+}
+
+
+.main__index__heading>h2 {
+  animation: animate 2s 1;
+}
+
+.main__index__heading>p {
+  animation: animate 2s 1;
+}
+
+.main__cards>div {
+  animation: animate 2s 1;
+}
+
+
+@keyframes animate {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes mymove {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: 200px;
+  }
+}
+
+.gradient {
+  background-color: rgb(131, 58, 180);
+  background-image: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 0%, rgba(252, 176, 69, 1) 100%);
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.radial-gradient {
+
+  /* background-image: radial-gradient(#fd4829 -464%, transparent 86%, white 10%); */
+  /* background-image: radial-gradient(cyan 0%, transparent 20%, salmon 40%); */
+  background-image: radial-gradient(#fd4829a3 -87%, transparent 72%, #ffffff00 0%);
+}
+
+/* ---------- Director Header Nav --------- */
+
+@media only screen and (max-width: 825px) {
+  #drowerNav {
+    display: block !important;
+  }
+
+  #accordionNav {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 825px) {
+  #drowerNav {
+    display: none !important;
+  }
+
+  #accordionNav {
+    display: block !important;
+  }
+}
+
+/* ----------Index Card------------- */
+
+@media screen and (min-width: 0px) {
+  .indexCard {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 621px) {
+  .indexCard {
+    width: 48% !important;
+  }
+}
+
+@media screen and (min-width:1001px) {
+  .indexCard {
+    width: 32% !important;
+  }
+}
+
+.indexCard {
+  width: 49%;
+  height: 286px;
+  background-color: #fee2e2;
+  border: solid #f89786 1px;
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+
+.indexCardIcon {
+  width: full;
+  height: 25%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.indexCardBody {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0px 15px;
+  margin-top: 7px;
+}
+
+.indexCardPUp {
+  font-size: 140%;
+  color: #212529;
+  line-height: 29px;
+}
+
+.indexCardPDown {
+  /* color: #6c757d; */
+  color: #4b4f52;
+  font-size: 14px;
+  margin-top: 3%;
+}
+
+.indexBtnOuter {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  height: 18%;
+  bottom: 65px;
+  right: 4%;
+  left: 4%;
+}
+
+.indexBtn {
+  height: 100%;
+  background-color: #fc4829;
+  color: #FFF;
+  border-radius: 10px;
+  font-size: 100%;
+  text-align: center;
+}
+
+.indexBtnHalf {
+  width: 48%;
+}
+
+.indexBtnFull {
+  width: 100%;
+}
+
+.indexBtn:hover {
+  background-color: #ff664b !important;
+}
+
+/*-----------Director Form-------------*/
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.css-serial {
+  counter-reset: serial-number;
+}
+
+.css-serial td:first-child:before {
+  counter-increment: serial-number;
+  content: counter(serial-number);
+}
+
+.css-serial .add-serial-here:first-child:before {
+  counter-increment: serial-number;
+  content: counter(serial-number);
+}
+
+.div-serial {
+  counter-reset: serial-number;
+}
+
+.div-serial p:first-child:before {
+  counter-increment: serial-number;
+  content: counter(serial-number);
+}
+
+.div-serial p:first-child:before {
+  counter-increment: serial-number;
+  content: counter(serial-number);
+}
+
+.news-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.news-headlines {
+  display: inline-block;
+  /* display the headlines in a row */
+  animation: scroll 40s linear infinite;
+  /* set the animation properties */
+  animation-play-state: running;
+}
+
+.news-headlines:hover {
+  animation-play-state: paused;
+  /* pause the animation on hover */
+}
+
+.news-headline {
+  margin-right: 20px;
+  /* add some margin between headlines */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+    /* start at the left */
+  }
+
+  100% {
+    transform: translateX(-100%);
+    /* end at the right */
+  }
+}
+
+.dashboard-gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 16%, rgba(255, 255, 255, 1) 94%), linear-gradient(90deg, #e66465, #f97316)
+}
+
+.ant-upload-list {
+  display: none;
+
+}
+
+.ant-upload-drag {
+  border: none;
+}
+
+.ant-image-preview-img {
+  display: inline;
+}
+
+.new__gradient {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 0.5012861834186799) 0%, rgba(252, 176, 69, 0.49848506297050066) 100%);
+}
+
+/* Masonry layout */
+
+
+/* For smaller screens */
+@media (max-width: 640px) {
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+/* For small screens and up */
+@media (min-width: 640px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* For medium screens and up */
+@media (min-width: 768px) {
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* For large screens and up */
+@media (min-width: 1024px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Your custom CSS to remove the styles from the Bootstrap accordion-button */
+.accordionHeader>.accordion-button:not(.collapsed) {
+  color: initial !important;
+  background-color: initial !important;
+  box-shadow: none !important;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #1d4ed8; 
+  color: white;
+}
+
+.tox-notifications-container{
+  display:none !important;
+  background-color: red;
+  color: white;
+}
+
+.tox-statusbar__branding{
+  display:none;
+}
+
+.ql-toolbar.ql-snow{
+  background-color: #f4f4f4;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ant-modal-root{
+  position: relative;
+  z-index: 1022;
+}
+
+.usha-gradient{
+  /* Apply gradient background */
+  background: linear-gradient(90deg, rgba(242,90,41,1) 32%, rgba(26,138,22,1) 40%, rgba(11,85,159,1) 59%);
+  
+  /* Set text color to transparent */
+  color: transparent;
+  
+  /* Apply background clip to text */
+  -webkit-background-clip: text;
+  background-clip: text;
+}

@@ -1,0 +1,151 @@
+// researchProject => complete
+let document = db.researchprojectadmins.find();
+document.forEach(function(doc){
+    let newdoc = {...doc, otherUser: "Admin"}
+    db.researchprojects.insert(newdoc)
+});
+
+// PhdAwarded 
+let document = db.phdawardedadmins.find();
+document.forEach(function(doc){
+    let { scholarName, schoolName, guideName, degreeName, awardSubmit, thesisTitle, yearOfScholar, rac, gender, category, phdAwardYear, year, proof, createdAt, updatedAt } = doc
+    let newdoc = { scholarName, departmentName : schoolName, guideName, degreeName, awardSubmit, thesisTitle, yearOfScholar, rac, gender, category, phdAwardYear, year, proof, otherUser: "Admin", createdAt, updatedAt }
+    db.phdawardeds.insert(newdoc)
+});
+
+// ExtensionActivitys no similar collection
+
+
+// prorationToHE => chack no data in backup
+let document = db.headmins.find();
+document.forEach(function(doc){
+    let {nameOfStudent, programGraduated, nameOfInstitution, programmeAdmitted, year, proof, schoolName} = doc
+    let newdoc = {Name_of_student_enrolling: nameOfStudent, Program_graduated_from: programGraduated, Name_of_institution_admitted: nameOfInstitution, Name_of_programme_admitted: programmeAdmitted, Academic_Year: year, Upload_Proof: proof, SchoolName: schoolName, otherUser: "PG"}
+    db.progressiontohes.insert(newdoc)
+});
+
+// demandRatio => chack no data in backup
+let document = db.demandratioadmins.find();
+document.forEach(function(doc){
+    let {programmeCode, programmeName, year, seatsAvailable, eligibleApplications, studentsAdmitted, programType, proof, schoolName} = doc
+    let newdoc = {Programme_Code: programmeCode, Programme_name: programmeName, Academic_Year: year, Number_of_seats_available: seatsAvailable, Number_of_eligible_applications: eligibleApplications, Number_of_Students_admitted: studentsAdmitted, Type_of_program: programType, Upload_Proof: proof, SchoolName: schoolName, otherUser: "PG"}
+    db.demandratios.insert(newdoc)
+});
+
+// jrfsrfv => complete
+let document = db.jrfsrfadmins.find();
+document.forEach(function(doc){
+    let newdoc = {...doc, otherUser: "Admin"}
+    db.jrfsrves.insert(newdoc)
+});
+
+//eContentDeveloped -> complete
+let document = db.swayamecontentdevelopeds.find();
+document.forEach(function(doc){
+    let newdoc = {...doc, otherUser: "Swayam"}
+    db.econtentdevelopeds.insert(newdoc)
+});
+
+
+// valueAddedCources -> complete
+let document = db.swayamvalueaddedcourses.find();
+document.forEach(function(doc){
+    let {nameOfProgram, programCode, modeOfCourse, yearOfOffering, contactHours, studentsEnrolled, studentsCompleting, academicYear, proof} = doc
+    let newdoc = {Program_Name: nameOfProgram, Course_Code_if_any: programCode, Name_of_the_value_added_courses_offered: modeOfCourse, Year_of_offering: yearOfOffering, Duration_of_the_course: contactHours, Number_of_students_enrolled: studentsEnrolled, Number_of_Students_completing_the_course: studentsCompleting, Academic_year: academicYear, Upload_Proof: proof, SchoolName: "Swayam"}
+    db.valueaddedcources.insert(newdoc)
+});
+
+// conference /seminar /workshop Organized -> complete 
+var document = db.conferenceorganizeds.find();
+document.forEach(function(doc){
+    let {programTitle, schoolName, fundedBy, isNational, noOfParticipants, year, proof, From_Date, To_Date, userId} = doc
+    var newdoc = {Title_Of_the_Program: programTitle, SchoolName: schoolName, fundedBy, Level_of_program: isNational, Number_of_Participants: noOfParticipants, Year: year, Upload_Proof: proof, From_Date, To_Date, userId}
+    db.conferencessemiworkshoporganizeds.insert(newdoc)
+});
+
+{/* comand for add otherUser respective SCHOOL */}
+     {/* <OtherMainTable model="CounselingAndGuidance" extraInitialFilds={{SchoolName: "Centre for Competitive Exams, Training & Skills Development" }}  />
+    <OtherMainTable model="ExtensionActivities" extraInitialFilds={{ SchoolName: "NSS"}} /> */}
+
+    db.counselingandguidances.updateMany({ SchoolName: "Centre for Competitive Exams, Training & Skills Development" }, { $set: { otherUser: "Skill" } });
+
+
+    db.extensionactivities.updateMany({ SchoolName: "Centre for Competitive Exams, Training & Skills Development" }, { $set: { otherUser: "Skill" } });
+
+
+
+
+
+// added guideName and schoolName in jrfsrf schema
+const data = db.jrfsrves.aggregate([
+    {
+        $lookup: {
+            from: "users",
+            localField: "userId",
+            foreignField: "_id",
+            as: "user"
+        }
+    },
+    {
+        $addFields: {
+            userId: { $arrayElemAt: ["$user", 0] }
+        }
+    },
+    {
+        $project: {
+            user: 0 // Optionally remove the 'user' field from the result
+        }
+    }
+]);
+
+data.forEach(function(doc) {
+    if(doc.userId){
+        db.jrfsrves.updateOne(
+            { "_id": doc._id }, 
+            { 
+                "$set": {
+                    "guideName": doc.userId.name,
+                    "schoolName": doc.userId.department
+                } 
+            }
+        );
+    }
+});
+
+
+const data = db.researchprojects.aggregate([
+    {
+        $lookup: {
+            from: "users",
+            localField: "userId",
+            foreignField: "_id",
+            as: "user"
+        }
+    },
+    {
+        $addFields: {
+            userId: { $arrayElemAt: ["$user", 0] }
+        }
+    },
+    {
+        $project: {
+            user: 0 // Optionally remove the 'user' field from the result
+        }
+    }
+]);
+
+data.forEach(function(doc) {
+    if(doc.userId){
+        db.researchprojects.updateOne(
+            { "_id": doc._id }, 
+            { 
+                "$set": {
+                    "guideName": doc.userId.name,
+                    "schoolName": doc.userId.department
+                } 
+            }
+        );
+    }
+});
+
+bookandchapters, researchpapers, patents

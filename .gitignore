@@ -1,0 +1,12 @@
+/node_modules
+/Server/uploads
+/Server/build
+/Server/Temp_Backup"
+/Server/maintenance-build
+.env
+/excels
+/sampleExcels
+/pdfs
+/public
+/build
+package-lock.json

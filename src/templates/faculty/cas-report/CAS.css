@@ -1,0 +1,22 @@
+@media print {
+    .casTable {
+        break-inside: avoid;
+        page-break-after: always;
+        page-break-inside: avoid;
+        page-break-before: avoid;
+    }
+
+    .academic-start {
+        break-inside: avoid;
+        page-break-after: always;
+        page-break-inside: avoid;
+        page-break-before: avoid;
+    }
+
+    .break {
+        break-inside: avoid;
+        page-break-after: always;
+        page-break-inside: avoid;
+        page-break-before: avoid;
+    }
+}
