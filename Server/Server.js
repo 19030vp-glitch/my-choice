@@ -398,7 +398,7 @@ app.use(express.static(path.join(__dirname, "build")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 })
-
-app.listen(process.env.PORT, function () {
-  console.log(`Server started successfully at ${process.env.PORT}.`);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, function () {
+  console.log(`Server started successfully at ${PORT}.`);
 });
