@@ -9,7 +9,7 @@ import { modifyTableObject } from '../../admin/pages/AdminOthers'
 import allTableHeads from '../../admin/js/allTableHeads'
 
 function AQARTablesObject({ academicYear, isDirector, school }) {
-    const factyNameAndDepartment = {guideName: 'Faculty Name', schoolName: 'Faculty School',}
+    const factyNameAndDepartment = { guideName: 'Faculty Name', schoolName: 'Faculty School', }
     return {
         "extended-profile": [
             {
