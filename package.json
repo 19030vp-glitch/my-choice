@@ -71,13 +71,13 @@
     "xlsx-populate": "^1.21.0"
   },
   "scripts": {
-    "start": "set PORT=3000 && react-scripts start",
     "dev": "nodemon ./Server/Server.js",
-    "build": "react-scripts build --no-source-map && rm -r ./Server/build && mv ./build ./Server/ && pm2 reload all",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "node ./postinstall.js",
-    "pm2": "pm2 start /home/sms2019/react-workspace/SRTMUN-UIMS/Server/Server.js -i max --restart-delay=5000"
+    "pm2": "pm2 start /home/sms2019/react-workspace/SRTMUN-UIMS/Server/Server.js -i max --restart-delay=5000",
+    "start": "node Server/Server.js",
+    "build": "react-scripts build --no-source-map && rm -rf Server/build && mv build Server/"
   },
   "eslintConfig": {
     "extends": [
